@@ -1,14 +1,17 @@
-import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
-import Card from './components/Card';
+import { Flex } from '@chakra-ui/react';
+import InfoPanel from './components/InfoPanel'
+import Sidebar from './components/Sidebar'
+import Dashboard from './pages/Dashboard'
 
 function App() {
     return (
-        <Flex p="10" justifyContent="space-between">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+        <Flex>
+            <Sidebar />
+            <Flex direction="column" p="4rem" pr="2rem" minWidth="75vw">
+                <Dashboard />
+            </Flex>
+            <InfoPanel />
         </Flex>
     );
 }

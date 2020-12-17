@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react'
 
 const Card = () => {
     return (
-        <Box minW="sm" borderWidth="1px" borderRadius="lg">
+        <Box minWidth="265px" borderWidth="1px" borderRadius="lg" borderColor="gray.300" bgColor="white">
             <Box p="8">
                 <Box d="flex" alignItems="baseline">
                     <Box
