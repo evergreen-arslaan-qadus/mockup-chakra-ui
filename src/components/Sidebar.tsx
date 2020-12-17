@@ -13,19 +13,19 @@ const Sidebar = () => {
                 </Box>
                 <Box height="100%" display="flex" alignItems="center">
                     <Flex height="400px" direction="column">
-                        <Button height="150px" variant="ghost" color="white">
+                        <Button height="150px" variant="ghost" color="white" _hover={{ background: "#198e24" }} _active={{ background: "#167e20" }}>
                             <VStack>
                                 <Icon as={DashboardOutlined} />
                                 <Text>Dashboard</Text>
                             </VStack>
                         </Button>
-                        <Button height="150px" variant="ghost" color="white">
+                        <Button height="150px" variant="ghost" color="white" _hover={{ background: "#198e24" }} _active={{ background: "#167e20" }}>
                             <VStack>
                                 <Icon as={PersonOutline} />
                                 <Text>Person</Text>
                             </VStack>
                         </Button>
-                        <Button height="150px" variant="ghost" color="white">
+                        <Button height="150px" variant="ghost" color="white" _hover={{ background: "#198e24" }} _active={{ background: "#167e20" }}>
                             <VStack>
                                 <Icon as={PeopleOutline} />
                                 <Text>People</Text>
