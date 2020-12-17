@@ -7,11 +7,15 @@ import Dashboard from './pages/Dashboard'
 function App() {
     return (
         <Flex>
-            <Sidebar />
+            <Flex minWidth="5vw">
+                <Sidebar />
+            </Flex>
             <Flex direction="column" p="4rem" pr="2rem" minWidth="75vw">
                 <Dashboard />
             </Flex>
-            <InfoPanel />
+            <Flex minWidth={{ sm: 0, md: '10vw', lg: '20vw' }}>
+                <InfoPanel />
+            </Flex>
         </Flex>
     );
 }

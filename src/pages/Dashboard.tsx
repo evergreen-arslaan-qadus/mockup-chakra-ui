@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import { Box, Button, Flex, Heading } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, SimpleGrid } from '@chakra-ui/react';
 import { ArrowForward } from '@material-ui/icons';
 import Card from '../components/Card';
 import { Collapse } from '@material-ui/core';
 
 const Dashboard = () => {
     const [showAllPatients, setShowAllPatients] = useState(false);
+    const Cards = [0, 1, 2, 3].map(item => (<Card useModal={item % 2 === 0} />));
+
     return (
         <>
             <Box>
@@ -18,21 +20,18 @@ const Dashboard = () => {
                     Last Visited Patients
                 </Heading>
             </Box>
-            <Box display="flex" justifyContent="space-between">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-            </Box>
+            <Flex justifyContent="space-between">
+                {Cards}
+            </Flex>
             <Collapse in={showAllPatients} collapsedHeight={0}>
                 <Flex justifyContent="space-between" pt="2rem">
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card preset={1} />
+                    <Card preset={2} />
+                    <Card preset={3} />
                     <Card />
                 </Flex>
             </Collapse>
-            <Box display="flex" justifyContent="flex-end" paddingTop="1rem">
+            <Flex justifyContent="flex-end" paddingTop="1rem">
                 <Button
                     onClick={() => setShowAllPatients(!showAllPatients)}
                     color="white"
@@ -44,7 +43,7 @@ const Dashboard = () => {
                 >
                     {showAllPatients ? "Hide" : "See"} all patients
                 </Button>
-            </Box>
+            </Flex>
         </>
     )
 }
