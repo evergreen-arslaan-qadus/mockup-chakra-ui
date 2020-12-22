@@ -20,6 +20,8 @@ const Button = (props: ButtonProps): React.ReactElement<ButtonProps> => {
     return (
         <ChakraButton
             _active={{ bgColor: 'green.pressed' }}
+            _focus={{ border: '3px', borderStyle: 'solid', borderColor: 'green.pressed' }}
+            _hover={{ bgColor: 'green.75' }}
             {...styleProps}
         >
             {label}
