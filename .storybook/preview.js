@@ -1,5 +1,6 @@
 import React from 'react'
-import { ThemeProvider, CSSReset, theme } from '@chakra-ui/react'
+import { ThemeProvider, CSSReset } from '@chakra-ui/react'
+import { theme } from '../src/theme';
 
 export const decorators = [
   (Story) => (
