@@ -4,7 +4,7 @@ import { buttonStyleGenerator } from './Button.style';
 
 export interface ButtonProps {
     children: React.ReactNode
-    size?: 'xsmall' | 'small' | 'large' | 'xlarge'
+    size: 'xsmall' | 'small' | 'large' | 'xlarge'
     variant?: 'primary' | 'secondary' | 'discrete' |
     'tentative' | 'destructive' | 'except' | 'light'
     color?: 'default' | 'destructive' | 'execpt'

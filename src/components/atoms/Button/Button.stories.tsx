@@ -7,9 +7,6 @@ import Button, { ButtonProps } from './Button';
 export default {
   title: 'Evergreen/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
@@ -18,31 +15,53 @@ export const Primary = Template.bind({});
 Primary.args = {
   label: 'Button',
   variant: 'primary',
+  size: 'small'
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Button',
+  size: 'small',
   variant: 'secondary'
 };
 
 export const Discrete = Template.bind({});
 Discrete.args = {
   label: 'Button',
+  size: 'small',
   variant: 'discrete'
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  variant: 'primary',
+
+export const Destructive = Template.bind({});
+Destructive.args = {
   label: 'Button',
+  variant: 'destructive',
+};
+
+export const Except = Template.bind({});
+Except.args = {
+  label: 'Button',
+  variant: 'except',
+};
+
+export const Light = Template.bind({});
+Light.args = {
+  label: 'Button',
+  variant: 'light',
 };
 
 export const XLarge = Template.bind({});
 XLarge.args = {
   size: 'xlarge',
   variant: 'primary',
+  label: 'Button',
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  variant: 'primary',
+  size: 'large',
   label: 'Button',
 };
 
@@ -64,22 +83,4 @@ export const Tentative = Template.bind({});
 Tentative.args = {
   label: 'Button',
   variant: 'tentative',
-};
-
-export const Destructive = Template.bind({});
-Destructive.args = {
-  label: 'Button',
-  variant: 'destructive',
-};
-
-export const Except = Template.bind({});
-Except.args = {
-  label: 'Button',
-  variant: 'except',
-};
-
-export const Light = Template.bind({});
-Light.args = {
-  label: 'Button',
-  variant: 'light',
 };
