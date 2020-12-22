@@ -1,6 +1,6 @@
 import { ButtonProps } from "./Button"
 
-export const buttonStyleGenerator = ({ children, label, variant }: ButtonProps) => {
+export const buttonStyleGenerator = ({ variant }: ButtonProps) => {
 
     return {
         active: {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button as ChakraButton, Flex } from '@chakra-ui/react';
+import { Button as ChakraButton } from '@chakra-ui/react';
 import { buttonStyleGenerator } from './Button.style';
 
 export interface ButtonProps {
@@ -9,12 +9,10 @@ export interface ButtonProps {
     variant?: 'icon' | 'primary' | 'secondary' | 'light' | 'discree'
     color?: 'default' | 'tentative' | 'destructive' | 'execpt'
     label: string
-    rightIcon?: React.ReactElement
-    leftIcon?: React.ReactElement
 }
 
 const Button = (props: ButtonProps): React.ReactElement<ButtonProps> => {
-    const { children, label, leftIcon, rightIcon } = props;
+    const { children, label } = props;
     const styleProps = buttonStyleGenerator(props);
 
     return (
