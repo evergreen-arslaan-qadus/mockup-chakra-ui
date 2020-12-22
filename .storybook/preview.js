@@ -10,3 +10,23 @@ export const decorators = [
     </ThemeProvider>
   ),
 ];
+
+export const parameters = {
+  backgrounds: {
+    default: 'Grey',
+    values: [
+      {
+        name: 'Grey',
+        value: theme.colors.gray[5],
+      },
+      {
+        name: 'White',
+        value: theme.colors.white,
+      },
+      {
+        name: 'Green',
+        value: theme.colors.green[0],
+      },
+    ],
+  },
+};
