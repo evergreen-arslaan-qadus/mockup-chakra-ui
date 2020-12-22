@@ -28,8 +28,9 @@ export const theme = extendTheme({
             75: "#939393",
             50: "#b7b7b7",
             25: "#dbdbdb",
-            5: "#f7f7f7",
             10: "#f0f0f0",
+            5: "#f7f7f7",
+            pressed: '#e2e2e2',
             dark: '#454545'
         },
         ruby: {

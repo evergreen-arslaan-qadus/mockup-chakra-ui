@@ -3,10 +3,9 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import Button, { ButtonProps } from './Button';
-import { AlertIcon } from '@chakra-ui/react';
 
 export default {
-  title: 'Example/Button',
+  title: 'Evergreen/Button',
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -25,6 +24,12 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Button',
   variant: 'secondary'
+};
+
+export const Discrete = Template.bind({});
+Discrete.args = {
+  label: 'Button',
+  variant: 'discrete'
 };
 
 export const Large = Template.bind({});
