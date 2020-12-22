@@ -35,11 +35,51 @@ Discrete.args = {
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
+  variant: 'primary',
+  label: 'Button',
+};
+
+export const XLarge = Template.bind({});
+XLarge.args = {
+  size: 'xlarge',
+  variant: 'primary',
   label: 'Button',
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
+  variant: 'primary',
   label: 'Button',
+};
+
+export const XSmall = Template.bind({});
+XSmall.args = {
+  size: 'xsmall',
+  variant: 'primary',
+  label: 'Button',
+};
+
+export const Tentative = Template.bind({});
+Tentative.args = {
+  label: 'Button',
+  variant: 'tentative',
+};
+
+export const Destructive = Template.bind({});
+Destructive.args = {
+  label: 'Button',
+  variant: 'destructive',
+};
+
+export const Except = Template.bind({});
+Except.args = {
+  label: 'Button',
+  variant: 'except',
+};
+
+export const Light = Template.bind({});
+Light.args = {
+  label: 'Button',
+  variant: 'light',
 };
