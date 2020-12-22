@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button as ChakraButton } from '@chakra-ui/react';
+import { Button as ChakraButton, Flex } from '@chakra-ui/react';
 import { buttonStyleGenerator } from './Button.style';
 
 export interface ButtonProps {
@@ -14,15 +14,15 @@ export interface ButtonProps {
 }
 
 const Button = (props: ButtonProps): React.ReactElement<ButtonProps> => {
-    const { children, label } = props;
+    const { children, label, leftIcon, rightIcon } = props;
     const styleProps = buttonStyleGenerator(props);
 
     return (
         <ChakraButton
-            _active={{ bgColor: 'green.pressed' }}
-            _focus={{ border: '3px', borderStyle: 'solid', borderColor: 'green.pressed' }}
-            _hover={{ bgColor: 'green.75' }}
-            {...styleProps}
+            _active={styleProps.active}
+            _focus={styleProps.focus}
+            _hover={styleProps.hover}
+            {...styleProps.styles}
         >
             {label}
             {children}
