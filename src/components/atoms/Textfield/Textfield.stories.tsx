@@ -14,6 +14,5 @@ const Template: Story<TextfieldProps> = (args) => <Textfield {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   label: 'Textfield',
-  variant: 'primary',
   labelBackgroundColor: '#f7f7f7'
 };
