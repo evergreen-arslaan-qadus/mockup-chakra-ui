@@ -94,6 +94,11 @@ export const textfieldStyleGenerator = ({ variant, size }: TextfieldProps) => {
             // fontSize,
             // border: variant === 'light' ? '2px' : '',
             // borderColor: variant === 'light' ? 'green.0' : '',
+            width: '195px',
+            height: '30px',
+            borderRadius: '5px',
+            outline: 'none',
+            padding: '5px',
         }
     };
 };
