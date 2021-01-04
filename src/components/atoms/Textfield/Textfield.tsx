@@ -9,39 +9,42 @@ export interface TextfieldProps {
     valid?: boolean
     invalid?: boolean
     placeholder?: string
+    helper?: string
 }
 
 const Textfield = (props: TextfieldProps): React.ReactElement<TextfieldProps> => {
-    const { label, valid = false, placeholder = '', invalid = false } = props;
+    const { label, valid = false, placeholder = '', invalid = false, helper = '' } = props;
     const [isValid, setIsValid] = useState(valid);
     const [isInvalid, setIsInvalid] = useState(invalid);
-    const styleProps = textfieldStyleGenerator(props, isValid, isInvalid);
-    const [hasFocus, setHasFocus] = useState(false);
     const [text, setText] = useState(placeholder);
+    const [hasFocus, setHasFocus] = useState(false);
+    const styleProps = textfieldStyleGenerator(props, isValid, isInvalid, text.length);
 
-    const Span = chakra("span", {
+    const Label = chakra("span", {
         baseStyle: {
-            ...styleProps.span.styles
+            ...styleProps.span.styles,
         },
     });
 
-    const styles = isValid ? {
-        transition: 'all 0.2s ease',
-        top: '2px',
-        color: theme.colors.green[75],
-    } : hasFocus ? {
-        top: '2px',
-        transition: 'all 0.2s ease',
-        color: isInvalid ? theme.colors.ruby[0] : theme.colors.gray.dark
-    } : isInvalid ? {
-        transition: 'all 0.2s ease',
-        top: text.length > 0 ? '2px' : '22px',
-        color: theme.colors.ruby[0],
-    } : {};
+    const Helper = chakra("span", {
+        baseStyle: {
+            ...styleProps.helper.styles
+        },
+    });
+
+    const labelStyles =
+        isValid ? styleProps.span.valid :
+            hasFocus ? styleProps.span.focus :
+                isInvalid ? styleProps.span.invalid : {};
+
+    const helperStyles =
+        isValid ? styleProps.helper.valid :
+            hasFocus ? styleProps.helper.focus :
+                isInvalid ? styleProps.helper.invalid : {};
 
     return (
         <Flex alignItems="center" width="100%">
-            <Span color="gray.75" {...styles}>{label}</Span>
+            <Label color="gray.75" {...labelStyles}>{label}</Label>
             <ChakraTextfield
                 onChange={
                     (e) => {
@@ -77,6 +80,7 @@ const Textfield = (props: TextfieldProps): React.ReactElement<TextfieldProps> =>
                 {...styleProps.textfield.styles}
                 value={text}
             />
+            <Helper color="gray.75" {...helperStyles}>{helper}</Helper>
         </Flex>
     )
 }

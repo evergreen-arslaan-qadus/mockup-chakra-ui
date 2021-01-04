@@ -32,3 +32,11 @@ Invalid.args = {
   invalid: true,
   placeholder: 're'
 };
+
+export const Helper = Template.bind({});
+Helper.args = {
+  label: 'Password',
+  labelBackgroundColor: '#f7f7f7',
+  placeholder: '',
+  helper: 'Captial letter required'
+};
