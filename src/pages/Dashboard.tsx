@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Button, Flex, Heading, SimpleGrid } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading } from '@chakra-ui/react';
 import { ArrowForward } from '@material-ui/icons';
 import Card from '../components/Card';
 import { Collapse } from '@material-ui/core';
