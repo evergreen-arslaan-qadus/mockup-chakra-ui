@@ -16,3 +16,19 @@ Primary.args = {
   label: 'Textfield',
   labelBackgroundColor: '#f7f7f7'
 };
+
+export const Valid = Template.bind({});
+Valid.args = {
+  label: 'Textfield',
+  labelBackgroundColor: '#f7f7f7',
+  valid: true,
+  placeholder: 'Test'
+};
+
+export const Invalid = Template.bind({});
+Invalid.args = {
+  label: 'Textfield',
+  labelBackgroundColor: '#f7f7f7',
+  invalid: true,
+  placeholder: 're'
+};

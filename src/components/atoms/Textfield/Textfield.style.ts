@@ -1,6 +1,6 @@
 import { TextfieldProps } from "./Textfield"
 
-export const textfieldStyleGenerator = (props: TextfieldProps, isValid: boolean) => {
+export const textfieldStyleGenerator = (props: TextfieldProps, isValid: boolean, isInvalid: boolean) => {
     return {
         textfield: {
             active: {
@@ -11,7 +11,7 @@ export const textfieldStyleGenerator = (props: TextfieldProps, isValid: boolean)
             },
             focus: {
                 border: '2px',
-                borderColor: !isValid ? 'gray.75' : 'green.75',
+                borderColor: isValid ? 'green.75' : isInvalid ? 'ruby.0' : 'gray.75',
                 transition: 'all 0.2s ease',
             },
             styles: {
